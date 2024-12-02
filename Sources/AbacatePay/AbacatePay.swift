@@ -59,7 +59,7 @@ public class AbacatePay: @unchecked Sendable {
         }
     }
     
-    public struct Billing {
+    public struct Billing: @unchecked Sendable {
         private let parent: AbacatePay
         
         internal init(parent: AbacatePay) {
