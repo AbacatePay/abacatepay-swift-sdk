@@ -11,8 +11,8 @@ public struct Billing: Codable {
     public let frequency: BillingKind
     public let nextBilling: String?
     public let customer: CustomerReference?
-    public let accountId: String
-    public let storeId: String
+    public let accountId: String?
+    public let storeId: String?
     public let createdAt: String
     public let updatedAt: String
     
