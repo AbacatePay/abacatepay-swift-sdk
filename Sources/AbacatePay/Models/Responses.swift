@@ -1,11 +1,11 @@
 import Foundation
 
-public enum CreateBillingResponse {
+public enum CreateBillingResponse: Sendable {
     case success(billing: Billing)
     case error(message: String)
 }
 
-public enum ListBillingResponse {
+public enum ListBillingResponse: Sendable {
     case success(billings: [Billing])
     case error(message: String)
 }
