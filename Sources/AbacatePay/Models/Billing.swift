@@ -45,14 +45,14 @@ public struct CreateBillingData: Codable {
         public var externalId: String
         public var name: String
         public var quantity: Int
-        public var price: Double
+        public var price: Int
         public var description: String?
         
         public init(
             externalId: String,
             name: String,
             quantity: Int,
-            price: Double,
+            price: Int,
             description: String? = nil
         ) {
             self.externalId = externalId
