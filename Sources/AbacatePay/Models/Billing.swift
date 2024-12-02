@@ -47,6 +47,20 @@ public struct CreateBillingData: Codable {
         public var quantity: Int
         public var price: Double
         public var description: String?
+        
+        public init(
+            externalId: String,
+            name: String,
+            quantity: Int,
+            price: Double,
+            description: String? = nil
+        ) {
+            self.externalId = externalId
+            self.name = name
+            self.quantity = quantity
+            self.price = price
+            self.description = description
+        }
     }
     
     public init(
