@@ -1,6 +1,6 @@
 import Foundation
 
-public class AbacatePay {
+public class AbacatePay: @unchecked Sendable {
     private let apiKey: String
     private let baseURL = URL(string: "https://api.abacatepay.com/v1")!
     private let version = "1.0.0"

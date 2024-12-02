@@ -1,6 +1,6 @@
 import Foundation
 
-public struct CustomerMetadata: Codable {
+public struct CustomerMetadata: Codable, Sendable {
     public var name: String?
     public var cellphone: String?
     public var email: String

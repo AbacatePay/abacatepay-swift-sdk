@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Billing: Codable {
+public struct Billing: Codable, Sendable {
     public let id: String
     public let url: String
     public let amount: Double
@@ -16,24 +16,24 @@ public struct Billing: Codable {
     public let createdAt: String
     public let updatedAt: String
     
-    public struct Product: Codable {
+    public struct Product: Codable, Sendable {
         public let productId: String
         public let quantity: Int
     }
     
-    public struct CustomerReference: Codable {
+    public struct CustomerReference: Codable, Sendable {
         public let id: String
         public let metadata: CustomerMetadata
     }
 }
 
-public struct BillingMetadata: Codable {
+public struct BillingMetadata: Codable, Sendable {
     public var fee: Double
     public var returnUrl: String?
     public var completionUrl: String?
 }
 
-public struct CreateBillingData: Codable {
+public struct CreateBillingData: Codable, Sendable {
     public var frequency: BillingKind
     public var methods: [BillingMethods]
     public var products: [Product]
@@ -41,7 +41,7 @@ public struct CreateBillingData: Codable {
     public var completionUrl: String
     public var customerId: String?
     
-    public struct Product: Codable {
+    public struct Product: Codable, Sendable {
         public var externalId: String
         public var name: String
         public var quantity: Int
